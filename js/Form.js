@@ -36,7 +36,7 @@ class Form {
       player.update();
       player.updateCount(playerCount);
       this.greeting.html("Hello " + player.name)
-      this.greeting.position(diaplayWidth/2-70,displayHeight/4);
+      this.greeting.position(displayWidth/2-70,displayHeight/4);
     });
 
     this.reset.mousePressed(()=> {

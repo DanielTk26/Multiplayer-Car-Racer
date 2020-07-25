@@ -23,7 +23,7 @@ class Game {
         playerCount = playerCountRef.val();
         player.getCount();
       }
-      form = new Form()
+      form = new Form();
       form.display();
     }
     
@@ -42,7 +42,7 @@ class Game {
   play(){
     form.hide();
     Player.getPlayerInfo();
-
+    player.getCarsAtEnd();
 
     if(allPlayers !== undefined){
       background('#27dbdb');
@@ -87,7 +87,34 @@ class Game {
       player.update();
     }
 
+
+
+    if (player.distance>3860) {
+
+     gameState = 2;
+     player.rank+=1;
+     Player.updateCarsAtEnd(player.rank);
+
+    }
+
+
+
+
+
+
     drawSprites();
 
   }
+
+
+    end () {
+
+   console.log("Game Ended");
+   console.log(player.rank);
+
+
+    }
+
+
+
 }

@@ -37,10 +37,25 @@ function setup(){
 
 function draw(){
   if(playerCount === 4){
+    
     game.update(1);
+    gameState = 1;
+
   }
   if(gameState === 1){
     clear();
     game.play();
   }
+
+
+ if (gameState === 2) {
+
+  game.end()
+  game.update(2);
+
+ }
+
+
+
+
 }
